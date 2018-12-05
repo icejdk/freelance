@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import "~bootstrap/dist/css/bootstrap.min.css"; */
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+html,h1,h2,h3,h4,h5,h6,a{
+ font-family: "Raleway";
+}
+ 
+.navbar{ background:black;}
+
+.nav-link , .navbar-brand{ color: #156E5F; cursor: pointer;}
+
+.nav-link{ margin-right: 1em !important;}
+
+.nav-link:hover{ background: #156E5F; color: #1b140e; }
+
+.navbar-collapse{ justify-content: flex-end;}
+
+.navbar-toggler{  background:rgb(255, 255, 255) !important;}
