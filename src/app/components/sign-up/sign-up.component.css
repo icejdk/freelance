@@ -1,0 +1,36 @@
+header{
+    background-image: url('../../../imgs/wp3.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center center;
+    color: #156E5F;
+}
+header,
+.view {
+  height: 100%;
+}
+.view{
+    margin-top: 5em;
+}
+@media (max-width: 740px) {
+    header,
+    .view {
+      height: 1000px;
+    }
+  }
+
+  .card {
+    background-color: transparent;
+  }
+  
+  h6 {
+    line-height: 1.7;
+  }
+.valid-feedback.feedback-icon,
+.invalid-feedback.feedback-icon {
+    position: absolute;
+    width: auto;
+    bottom: 10px;
+    right: 10px;
+    margin-top: 0;
+}

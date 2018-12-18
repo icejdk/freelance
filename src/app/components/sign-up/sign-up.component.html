@@ -1,3 +1,146 @@
-<p>
-  sign-up works!
-</p>
+<header>
+  <div class="container main">
+    <div class="row mt-5 view">
+      <div class="col-lg-6 ol-md-6 mb-5 mt-md-0 mt-5 white-text text-center text-md-left">
+        <h1 class="h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s">Sign up right now! </h1>
+        <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
+        <h6 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga
+        nesciunt dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea
+        dolor molestiae, quisquam iste, maiores. Nulla.</h6>
+        <a class="btn btn-outline-white wow fadeInLeft" data-wow-delay="0.3s">Learn more</a>
+      </div>
+      <div class="col-lg-6 col-md-6 col-xl-5 mb-4">
+        <div class="card wow fadeInRight" data-wow-delay="0.3s" *ngIf="step==1">
+          <div class="card-body">
+            <div class="text-center">
+              <h3 class="white-text">
+                <i class="fa fa-user white-text"></i> Profile informations:</h3>
+              <hr class="hr-light">
+            </div>
+            <form (ngSubmit)="next()" #freelanceForm="ngForm">
+              {{diagnostic}}
+              <div class="md-form">
+                <i class="fa fa-user prefix white-text active"></i>
+                <input type="text" id="name" class="white-text form-control" [(ngModel)]="freelance.name" name="name" placeholder="your name" #name="ngModel" required>
+                <label for="name" class="active" > Your name</label>
+                <!-- <div [hidden]="name.valid" class="valid-feedback feedback-icon">
+                    <i class="fa fa-check"></i>
+                </div>
+                <div class="invalid-feedback feedback-icon">
+                      <i class="fa fa-times"></i>
+                </div> -->
+              </div>
+              <div class="md-form">
+                <i class="fa fa-envelope prefix white-text active"></i>
+                <input type="email" id="email" class="white-text form-control" placeholder="youremail@server.domain" required [(ngModel)]="freelance.email">
+                <label for="email" class="active">Your email</label>
+              </div>
+              <div class="md-form">
+                <i class="fa fa-lock prefix white-text active"></i>
+                <input type="password" id="password" class="white-text form-control" placeholder="********">
+                <label for="password">Your password</label>
+              </div>
+              <div class="text-right mt-4">
+                <button class="btn btn-indigo" [disabled]="!freelanceForm.form.valid">Next</button>
+                <hr class="hr-light mb-3 mt-4">
+                <div class="inline-ul text-center d-flex justify-content-center">
+                  <a class="p-2 m-2 tw-ic">
+                    <i class="fa fa-twitter white-text"></i>
+                  </a>
+                  <a class="p-2 m-2 li-ic">
+                    <i class="fa fa-linkedin white-text"> </i>
+                  </a>
+                  <a class="p-2 m-2 ins-ic">
+                    <i class="fa fa-instagram white-text"> </i>
+                  </a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="card wow fadeInRight" data-wow-delay="0.3s" *ngIf="step==2">
+          <div class="card-body">
+            <div class="text-center">
+              <h3 class="white-text">
+                <i class="fa fa-user white-text"></i> Professional profile:</h3>
+              <hr class="hr-light">
+            </div>
+            <form (ngSubmit)="next()" #freelanceForm="ngForm">
+              {{diagnostic}}
+              <div class="md-form">
+                <i class="fa fa-user prefix white-text active"></i>
+                <input type="text" id="form3" class="white-text form-control" placeholder="Service you can offer">
+                <label for="form3" class="active">Your Domain</label>
+              </div>
+              <div class="md-form">
+                <i class="fa fa-envelope prefix white-text active"></i>
+                <input type="email" id="form2" class="white-text form-control" placeholder="Adress or P.O.B.OX">
+                <label for="form2" class="active">Years of experience</label>
+              </div>
+              <div class="md-form">
+                <i class="fa fa-lock prefix white-text active"></i><br>
+                <input type="file" id="cv">
+                <label for="cv">Upload your cv</label>
+              </div>
+              <div class="text-right mt-4">
+                <button class="btn btn-indigo">Next</button>
+                <hr class="hr-light mb-3 mt-4">
+                <div class="inline-ul text-center d-flex justify-content-center">
+                  <a class="p-2 m-2 tw-ic">
+                    <i class="fa fa-twitter white-text"></i>
+                  </a>
+                  <a class="p-2 m-2 li-ic">
+                    <i class="fa fa-linkedin white-text"> </i>
+                  </a>
+                  <a class="p-2 m-2 ins-ic">
+                    <i class="fa fa-instagram white-text"> </i>
+                  </a>
+                </div>
+              </div>
+          </form>
+          </div>
+        </div>
+        <div class="card wow fadeInRight" data-wow-delay="0.3s" *ngIf="step==3">
+            <div class="card-body">
+              <div class="text-center">
+                <h3 class="white-text">
+                  <i class="fa fa-user white-text"></i> Your experience:</h3>
+                <hr class="hr-light">
+              </div>
+  
+              <div class="md-form">
+                <i class="fa fa-user prefix white-text active"></i>
+                <input type="text" id="form3" class="white-text form-control" placeholder="Enterprise">
+                <label for="form3" class="active">Enterprise name</label>
+              </div>
+              <div class="md-form">
+                <i class="fa fa-envelope prefix white-text active"></i>
+                <input type="email" id="form2" class="white-text form-control" placeholder="Adress or P.O.B.OX">
+                <label for="form2" class="active">Enterprise P.O.BOX</label>
+              </div>
+              <div class="md-form">
+                <i class="fa fa-lock prefix white-text active"></i><br>
+                <input type="file" id="cv">
+                <label for="cv">Upload your cv</label>
+              </div>
+              <div class="text-center mt-4">
+                <button class="btn btn-indigo">Sign up</button>
+                <hr class="hr-light mb-3 mt-4">
+                <div class="inline-ul text-center d-flex justify-content-center">
+                  <a class="p-2 m-2 tw-ic">
+                    <i class="fa fa-twitter white-text"></i>
+                  </a>
+                  <a class="p-2 m-2 li-ic">
+                    <i class="fa fa-linkedin white-text"> </i>
+                  </a>
+                  <a class="p-2 m-2 ins-ic">
+                    <i class="fa fa-instagram white-text"> </i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</header>
