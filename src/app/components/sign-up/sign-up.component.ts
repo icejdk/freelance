@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Freelance} from '../../interfaces/freelance'
+import {Freelance} from '../../interfaces/freelance';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
